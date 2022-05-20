@@ -1,0 +1,16 @@
+
+table {
+  width: 100%;
+}
+.btn{
+  background-color: #0f4571;
+  color: aliceblue;
+  text-align: center;
+  height: auto;
+  margin: 20px auto;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 1.35em;
+}

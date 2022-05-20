@@ -1,0 +1,13 @@
+
+  <form [formGroup]="form">
+    <mat-form-field appearance="outline" >
+      <mat-label>Nome do Participante</mat-label>
+       <input matInput  type="text" name="nome" formControlName="nome" value="">
+    </mat-form-field>
+
+
+
+    <button mat-stroked-button class="bt" type="submit" color="primary"(click)="salvar()">Salvar</button>
+  </form>
+
+

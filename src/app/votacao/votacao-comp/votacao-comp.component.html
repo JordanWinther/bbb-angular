@@ -1,0 +1,42 @@
+<!--
+<label id="example-radio-group-label">Pick your favorite season</label>
+<mat-radio-group  aria-labelledby="example-radio-group-label"  class="example-radio-group"  [(ngModel)]="favoriteSeason">
+  <mat-radio-button class="example-radio-button" *ngFor="let participante of seasons" [value]="season">
+    {{season}}
+  </mat-radio-button>
+</mat-radio-group>
+<div>Your favorite season is: {{favoriteSeason}}</div>
+-->
+
+
+
+<div class="container">
+
+
+  <form [formGroup]="form"  >
+      <ul *ngFor="let item of participantesInterface ">
+
+      <li>
+        <input  type="radio" formControlName="id" id="{{item.id}}" value="{{item.id}}">
+
+        <label for="{{item.id}}">{{item.nome}}</label>
+
+        <div class="check"><div class="inside"></div></div>
+      </li>
+
+
+
+
+
+    </ul>
+    <button class="btn" type="submit" (click)="votar()">Votar</button>
+
+  </form>
+  </div>
+
+  <div class="container">
+
+
+
+    </div>
+

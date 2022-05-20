@@ -1,0 +1,43 @@
+<div *ngIf=" participantesNgif$  | async as participantes; else loading  ">
+
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    <table mat-table [dataSource]="participantes" >
+
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="Id">
+        <th mat-header-cell *matHeaderCellDef> Id </th>
+        <td mat-cell *matCellDef="let element"> {{ element.id }} </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Nome </th>
+        <h3>Nome</h3>
+        <td class="td" mat-cell *matCellDef="let element"> {{ element.nome }} </td>
+      </ng-container>
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+</div>
+
+<ng-template #loading>
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</ng-template>
+
+
+
+
+
+
+<app-votacao-comp></app-votacao-comp>
+
+<!--<app-form-cadastro></app-form-cadastro>-->
+
+
+
